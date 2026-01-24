@@ -23,7 +23,7 @@ class Migration(migrations.Migration):
                 ('poids_fin', models.FloatField(blank=True, null=True, verbose_name='Poids final (kg)')),
                 ('duree', models.PositiveIntegerField(blank=True, null=True, verbose_name='Durée (jours)')),
                 ('poids_engraissement', models.FloatField(blank=True, null=True, verbose_name="Poids d'engraissement (kg)")),
-                ('proprietaire', models.CharField(choices=[('miguel', 'Miguel'), ('virgile', 'Virgile')], max_length=20, verbose_name='Propriétaire')),
+                ('proprietaire', models.CharField(choices=[('miguel', 'Miguel'), ('famille', 'Famille')], max_length=20, verbose_name='Propriétaire')),
                 ('sexe', models.CharField(choices=[('male', 'Mâle'), ('femelle', 'Femelle')], max_length=10, verbose_name='Sexe')),
                 ('observations', models.TextField(blank=True, verbose_name='Observations')),
                 ('boucle_ovin', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, related_name='embouches', to='troupeau.troupeau', verbose_name='Boucle ovin')),

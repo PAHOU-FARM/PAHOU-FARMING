@@ -28,7 +28,7 @@ class Migration(migrations.Migration):
                 ('date_sortie', models.DateField(blank=True, null=True, verbose_name='Date de sortie')),
                 ('statut', models.CharField(choices=[('naissance', 'Naissance'), ('vendu', 'Vendu'), ('decede', 'Décédé'), ('sortie', 'Sortie'), ('pret_notre_ferme', 'Prêt notre ferme'), ('pret_autre_ferme', 'Prêt autre ferme'), ('echange_ovin', 'Échange Ovin'), ('achat', 'Achat')], max_length=30, verbose_name='Statut')),
                 ('origine_ovin', models.CharField(choices=[('cotonou', 'Cotonou'), ('porto_novo', 'Porto-Novo'), ('abomey_calavi', 'Abomey-Calavi'), ('ouidah', 'Ouidah'), ('seme_kpodji', 'Sèmè-Kpodji'), ('akpakpa', 'Akpakpa'), ('godomey', 'Godomey'), ('tori_bossito', 'Tori-Bossito'), ('pahou', 'Pahou'), ('avrankou', 'Avrankou'), ('ifangni', 'Ifangni'), ('ketou', 'Kétou'), ('come', 'Comè'), ('lokossa', 'Lokossa'), ('dassa_zoume', 'Dassa-Zoumé')], max_length=50, verbose_name='Origine')),
-                ('proprietaire_ovin', models.CharField(choices=[('miguel', 'Miguel'), ('virgile', 'Virgile')], max_length=50, verbose_name='Propriétaire')),
+                ('proprietaire_ovin', models.CharField(choices=[('miguel', 'Miguel'), ('famille', 'Famille')], max_length=50, verbose_name='Propriétaire')),
                 ('observations', models.TextField(blank=True, help_text="Notes diverses sur l'animal", null=True, verbose_name='Observations')),
                 ('coefficient_consanguinite', models.FloatField(default=0.0, help_text='Calculé automatiquement selon Wright', verbose_name='Coefficient de consanguinité')),
                 ('created_at', models.DateTimeField(auto_now_add=True)),

@@ -23,7 +23,7 @@ class Migration(migrations.Migration):
                 ('poids_kg', models.DecimalField(decimal_places=2, max_digits=6, validators=[django.core.validators.MinValueValidator(Decimal('0.01'))], verbose_name='Poids (kg)')),
                 ('prix_vente', models.DecimalField(decimal_places=2, max_digits=10, validators=[django.core.validators.MinValueValidator(Decimal('0.00'))], verbose_name='Prix de vente')),
                 ('type_acheteur', models.CharField(choices=[('Elevage', 'Elevage'), ('Abattage', 'Abattage'), ('Reproduction', 'Reproduction')], max_length=20, verbose_name='Type d’acheteur')),
-                ('proprietaire_ovin', models.CharField(choices=[('Virgile', 'Virgile'), ('Miguel', 'Miguel')], max_length=20, verbose_name='Propriétaire')),
+                ('proprietaire_ovin', models.CharField(choices=[('Famille', 'Famille'), ('Miguel', 'Miguel')], max_length=20, verbose_name='Propriétaire')),
                 ('observations', models.TextField(blank=True, null=True, verbose_name='Observations')),
                 ('boucle_ovin', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, related_name='ventes', to='troupeau.troupeau', verbose_name='Ovin')),
             ],
